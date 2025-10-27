@@ -1,0 +1,72 @@
+https://wokwi.com/projects/443420262924369921
+
+int hijau_Selatan  = 2,  kuning_Selatan = 3,  merah_Selatan  = 4;
+int hijau_Timur    = 5,  kuning_Timur   = 6,  merah_Timur    = 7;
+int hijau_Utara    = 8,  kuning_Utara   = 9,  merah_Utara    = 10;
+int hijau_Barat    = 11, kuning_Barat   = 12, merah_Barat    = 13;
+
+void setup() {
+  pinMode(hijau_Selatan, OUTPUT);  pinMode(kuning_Selatan, OUTPUT);  pinMode(merah_Selatan, OUTPUT);
+  pinMode(hijau_Timur,   OUTPUT);  pinMode(kuning_Timur,   OUTPUT);  pinMode(merah_Timur,   OUTPUT);
+  pinMode(hijau_Utara,   OUTPUT);  pinMode(kuning_Utara,   OUTPUT);  pinMode(merah_Utara,   OUTPUT);
+  pinMode(hijau_Barat,   OUTPUT);  pinMode(kuning_Barat,   OUTPUT);  pinMode(merah_Barat,   OUTPUT);
+
+  digitalWrite(merah_Selatan, HIGH);
+  digitalWrite(merah_Utara, HIGH);
+  digitalWrite(merah_Barat, HIGH);
+
+  digitalWrite(merah_Timur, LOW);
+  digitalWrite(hijau_Timur, HIGH);
+}
+
+void loop() {
+  delay(4000);
+  digitalWrite(hijau_Timur, LOW);
+  digitalWrite(kuning_Timur, HIGH);
+  delay(2000);
+  digitalWrite(kuning_Timur, LOW);
+  digitalWrite(merah_Timur, HIGH);
+
+  digitalWrite(merah_Selatan, LOW);
+  digitalWrite(kuning_Selatan, HIGH);
+  delay(2000);
+  digitalWrite(kuning_Selatan, LOW);
+  digitalWrite(hijau_Selatan, HIGH);
+  delay(4000);
+  digitalWrite(hijau_Selatan, LOW);
+  digitalWrite(kuning_Selatan, HIGH);
+  delay(2000);
+  digitalWrite(kuning_Selatan, LOW);
+  digitalWrite(merah_Selatan, HIGH);
+
+  digitalWrite(merah_Barat, LOW);
+  digitalWrite(kuning_Barat, HIGH);
+  delay(2000);
+  digitalWrite(kuning_Barat, LOW);
+  digitalWrite(hijau_Barat, HIGH);
+  delay(4000);
+  digitalWrite(hijau_Barat, LOW);
+  digitalWrite(kuning_Barat, HIGH);
+  delay(2000);
+  digitalWrite(kuning_Barat, LOW);
+  digitalWrite(merah_Barat, HIGH);
+
+  digitalWrite(merah_Utara, LOW);
+  digitalWrite(kuning_Utara, HIGH);
+  delay(2000);
+  digitalWrite(kuning_Utara, LOW);
+  digitalWrite(hijau_Utara, HIGH);
+  delay(4000);
+  digitalWrite(hijau_Utara, LOW);
+  digitalWrite(kuning_Utara, HIGH);
+  delay(2000);
+  digitalWrite(kuning_Utara, LOW);
+  digitalWrite(merah_Utara, HIGH);
+
+  digitalWrite(merah_Timur, LOW);
+  digitalWrite(kuning_Timur, HIGH);
+  delay(2000);
+  digitalWrite(kuning_Timur, LOW);
+  digitalWrite(hijau_Timur, HIGH);
+}
+

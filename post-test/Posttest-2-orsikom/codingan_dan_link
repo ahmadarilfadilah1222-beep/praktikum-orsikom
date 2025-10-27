@@ -1,0 +1,856 @@
+Link = Link = https://wokwi.com/projects/443715681537926145
+
+// 2509106119_Ahmad_Aril_Fadillah_B
+int segA = 2;
+int segB = 3;
+int segC = 4;
+int segD = 5;
+int segE = 6;
+int segF = 8;
+int segG = 7;
+int hijau = 9;
+int kuning = 10;
+void setup() {
+  pinMode(segA, OUTPUT);
+  pinMode(segB, OUTPUT);
+  pinMode(segC, OUTPUT);
+  pinMode(segD, OUTPUT);
+  pinMode(segE, OUTPUT);
+  pinMode(segF, OUTPUT);
+  pinMode(segG, OUTPUT);
+  pinMode(hijau, OUTPUT);
+  pinMode(kuning, OUTPUT);
+}
+
+void loop() {
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(500);
+
+  digitalWrite(segA, HIGH);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, HIGH);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, HIGH);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, HIGH);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, HIGH);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, HIGH);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay (150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, HIGH);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, HIGH);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, HIGH);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, HIGH);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, HIGH);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, HIGH);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, HIGH);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, HIGH);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay (150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, HIGH);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, HIGH);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, HIGH);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay (150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, HIGH);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, HIGH);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, HIGH);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, HIGH);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, HIGH);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, HIGH);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);  
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, HIGH);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+
+
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, LOW);
+  digitalWrite(kuning, LOW);
+  delay(500);
+
+  digitalWrite(segA, HIGH);
+  digitalWrite(segB, HIGH);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, HIGH);
+  digitalWrite(segE, HIGH);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, HIGH);
+  digitalWrite(hijau, LOW);
+  digitalWrite(kuning, HIGH);
+  delay(500);
+
+
+
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, LOW);
+  digitalWrite(kuning, LOW);
+  delay(500);
+
+  digitalWrite(segA, HIGH);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, HIGH);
+  digitalWrite(segD, HIGH);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, HIGH);
+  digitalWrite(segG, HIGH);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, LOW);
+  delay(500);
+
+
+
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, LOW);
+  digitalWrite(kuning, LOW);
+  delay(500);
+
+  digitalWrite(segA, HIGH);
+  digitalWrite(segB, HIGH);
+  digitalWrite(segC, HIGH);
+  digitalWrite(segD, HIGH);
+  digitalWrite(segE, HIGH);
+  digitalWrite(segF, HIGH);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, LOW);
+  digitalWrite(kuning, HIGH);
+  delay(500);
+
+
+  
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, LOW);
+  digitalWrite(kuning, LOW);
+  delay(500);
+
+  digitalWrite(segA, HIGH);
+  digitalWrite(segB, HIGH);
+  digitalWrite(segC, HIGH);
+  digitalWrite(segD, HIGH);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, HIGH);
+  digitalWrite(segG, HIGH);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, LOW);
+  delay(500);
+
+
+
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, LOW);
+  digitalWrite(kuning, LOW);
+  delay(500);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, HIGH);
+  digitalWrite(segC, HIGH);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, LOW);
+  delay(500);
+
+
+
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, LOW);
+  digitalWrite(kuning, LOW);
+  delay(500);
+
+  digitalWrite(segA, HIGH);
+  digitalWrite(segB, HIGH);
+  digitalWrite(segC, HIGH);
+  digitalWrite(segD, HIGH);
+  digitalWrite(segE, HIGH);
+  digitalWrite(segF, HIGH);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, LOW);
+  digitalWrite(kuning, HIGH);
+  delay(500);
+
+
+
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, LOW);
+  digitalWrite(kuning, LOW);
+  delay(500);
+
+  digitalWrite(segA, HIGH);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, HIGH);
+  digitalWrite(segD, HIGH);
+  digitalWrite(segE, HIGH);
+  digitalWrite(segF, HIGH);
+  digitalWrite(segG, HIGH);
+  digitalWrite(hijau, LOW);
+  digitalWrite(kuning, HIGH);
+  delay(500);
+
+
+
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, LOW);
+  digitalWrite(kuning, LOW);
+  delay(500);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, HIGH);
+  digitalWrite(segC, HIGH);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, LOW);
+  delay(500);
+
+
+
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, LOW);
+  digitalWrite(kuning, LOW);
+  delay(500);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, HIGH);
+  digitalWrite(segC, HIGH);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, LOW);
+  delay(500);
+
+
+
+
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, LOW);
+  digitalWrite(kuning, LOW);
+  delay(500);
+
+  digitalWrite(segA, HIGH);
+  digitalWrite(segB, HIGH);
+  digitalWrite(segC, HIGH);
+  digitalWrite(segD, HIGH);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, HIGH);
+  digitalWrite(segG, HIGH);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, LOW);
+  delay(500);
+
+
+
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, LOW);
+  digitalWrite(kuning, LOW);
+  delay(500);  
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(500);
+
+
+
+
+  digitalWrite(segA, HIGH);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150); 
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, HIGH);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, HIGH);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, HIGH);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, HIGH);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, HIGH);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, HIGH);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, HIGH);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, HIGH);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, HIGH);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, HIGH);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, HIGH);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, HIGH);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, HIGH);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, HIGH);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, HIGH);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, HIGH);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, HIGH);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, HIGH);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, HIGH);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, HIGH);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, HIGH);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, HIGH);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, HIGH);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, HIGH);
+  digitalWrite(kuning, HIGH);
+  delay(150);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(hijau, LOW);
+  digitalWrite(kuning, LOW);
+  delay(500);
+}
+

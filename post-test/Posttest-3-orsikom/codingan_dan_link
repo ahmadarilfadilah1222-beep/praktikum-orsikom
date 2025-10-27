@@ -1,0 +1,113 @@
+Link = https://wokwi.com/projects/444778964618334209
+
+int tombol = 2; int segA = 3; int segB = 4; int segC = 5;
+int segD = 6;   int segE = 7; int segF = 8; int segG = 9;
+int merah = 10;
+int hijau = 11;
+
+int mode = 0;
+
+void setup() {
+  pinMode(tombol, INPUT_PULLUP);
+  pinMode(segA, OUTPUT);
+  pinMode(segB, OUTPUT);
+  pinMode(segC, OUTPUT);
+  pinMode(segD, OUTPUT);
+  pinMode(segE, OUTPUT);
+  pinMode(segF, OUTPUT);
+  pinMode(segG, OUTPUT);
+  pinMode(merah, OUTPUT);
+  pinMode(hijau, OUTPUT);
+
+  digitalWrite(segA, LOW);
+  digitalWrite(segB, LOW);
+  digitalWrite(segC, LOW);
+  digitalWrite(segD, LOW);
+  digitalWrite(segE, LOW);
+  digitalWrite(segF, LOW);
+  digitalWrite(segG, LOW);
+  digitalWrite(merah, HIGH);
+  digitalWrite(hijau, LOW);
+}
+
+void loop() {
+  if (digitalRead(tombol) == LOW) {
+    digitalWrite(merah, LOW);
+    digitalWrite(hijau, HIGH);
+
+    mode = mode + 1;
+    
+    if (mode > 9) {
+      mode = 0;
+    }
+
+  while (digitalRead(tombol) == HIGH) { }
+  delay(1000);
+  }
+
+  else {
+    digitalWrite(merah, HIGH);
+    digitalWrite(hijau, LOW);
+  }
+
+  if (mode == 0) {
+    digitalWrite(segA, HIGH); digitalWrite(segB, HIGH); digitalWrite(segC, HIGH);
+    digitalWrite(segD, HIGH); digitalWrite(segE, HIGH); digitalWrite(segF, HIGH);
+    digitalWrite(segG, LOW);
+  }
+
+  else if (mode == 1) {
+    digitalWrite(segA, LOW); digitalWrite(segB, HIGH); digitalWrite(segC, HIGH);
+    digitalWrite(segD, LOW); digitalWrite(segE, LOW);  digitalWrite(segF, LOW);
+    digitalWrite(segG, LOW);
+  }
+
+  else if (mode == 2) {
+    digitalWrite(segA, HIGH); digitalWrite(segB, HIGH); digitalWrite(segC, LOW);
+    digitalWrite(segD, HIGH); digitalWrite(segE, HIGH); digitalWrite(segF, LOW);
+    digitalWrite(segG, HIGH);
+  }
+
+  else if (mode == 3) {
+    digitalWrite(segA, HIGH); digitalWrite(segB, HIGH); digitalWrite(segC, HIGH);
+    digitalWrite(segD, HIGH); digitalWrite(segE, LOW);  digitalWrite(segF, LOW);
+    digitalWrite(segG, HIGH);
+  }
+
+  else if (mode == 4) {
+    digitalWrite(segA, LOW); digitalWrite(segB, HIGH); digitalWrite(segC, HIGH);
+    digitalWrite(segD, LOW); digitalWrite(segE, LOW);  digitalWrite(segF, HIGH);
+    digitalWrite(segG, HIGH);
+  }
+
+  else if (mode == 5) {
+    digitalWrite(segA, HIGH); digitalWrite(segB, LOW); digitalWrite(segC, HIGH);
+    digitalWrite(segD, HIGH); digitalWrite(segE, LOW); digitalWrite(segF, HIGH);
+    digitalWrite(segG, HIGH);
+  }
+
+  else if (mode == 6) {
+    digitalWrite(segA, HIGH); digitalWrite(segB, LOW); digitalWrite(segC, HIGH);
+    digitalWrite(segD, HIGH); digitalWrite(segE, HIGH);digitalWrite(segF, HIGH);
+    digitalWrite(segG, HIGH);
+  }
+
+  else if (mode == 7) {
+    digitalWrite(segA, HIGH); digitalWrite(segB, HIGH); digitalWrite(segC, HIGH);
+    digitalWrite(segD, LOW);  digitalWrite(segE, LOW);  digitalWrite(segF, LOW);
+    digitalWrite(segG, LOW);
+  }
+
+  else if (mode == 8) {
+    digitalWrite(segA, HIGH); digitalWrite(segB, HIGH); digitalWrite(segC, HIGH);
+    digitalWrite(segD, HIGH); digitalWrite(segE, HIGH); digitalWrite(segF, HIGH);
+    digitalWrite(segG, HIGH);
+  }
+
+  else if (mode == 9) {
+    digitalWrite(segA, HIGH); digitalWrite(segB, HIGH); digitalWrite(segC, HIGH);
+    digitalWrite(segD, HIGH); digitalWrite(segE, LOW);  digitalWrite(segF, HIGH);
+    digitalWrite(segG, HIGH);
+  }
+}
+

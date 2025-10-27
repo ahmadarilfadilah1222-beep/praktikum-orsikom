@@ -1,0 +1,272 @@
+Link = https://wokwi.com/projects/445418488072880129
+
+#include <Servo.h>
+
+Servo myServo;
+
+int tombol = 6;
+int hijau = 4;
+int merah = 5;
+int A = 7; int B = 8;
+int C = 9; int D = 10;
+int E = 11;int F = 12;
+int G = 13;
+
+
+int i = 1;
+int model = 0;
+int tekananTerakhir = 0;
+int servo = 0;
+
+void setup() {
+  pinMode(merah, OUTPUT); pinMode(hijau, OUTPUT);
+  pinMode(A, OUTPUT); pinMode(B, OUTPUT);
+  pinMode(C, OUTPUT); pinMode(D, OUTPUT);
+  pinMode(E, OUTPUT); pinMode(F, OUTPUT);
+  pinMode(G, OUTPUT);
+  pinMode(tombol, INPUT);
+  myServo.attach(3);
+  myServo.write(0);
+}
+
+void loop() {
+  int tombolstate = digitalRead(tombol);
+
+  if (tombolstate == HIGH) {
+    int waktu = 0;
+
+    while (digitalRead(tombol) == HIGH) {
+      delay(10);
+      waktu += 10;
+
+      if (waktu >= 1000) {
+        digitalWrite(merah, LOW); digitalWrite(hijau, LOW);
+        digitalWrite(A, LOW); digitalWrite(B, LOW);
+        digitalWrite(C, LOW); digitalWrite(D, LOW);
+        digitalWrite(E, LOW); digitalWrite(F, LOW);
+        digitalWrite(G, LOW);
+
+        myServo.detach();
+        while (digitalRead(tombol) == HIGH) { }
+        myServo.attach(3);
+        myServo.write(0);
+
+        model = 0;
+        tekananTerakhir = 0;
+        servo = 0;
+
+        delay(200);
+        return;
+      }
+    }
+
+    if (waktu > 0 && waktu < 1000) {
+      model += 1;
+      servo += 20;
+      if (model > 9) {
+        model = 1;
+        servo = 20;
+      }
+      if (servo > 180) servo = 180;
+      delay(200);
+    }
+  }
+
+  if (model != tekananTerakhir) {
+
+    if (model == 1) {
+      digitalWrite(A, LOW);  digitalWrite(B, HIGH);
+      digitalWrite(C, HIGH); digitalWrite(D, LOW);
+      digitalWrite(E, LOW);  digitalWrite(F, LOW);
+      digitalWrite(G, LOW);
+
+      myServo.write(servo);
+
+      for (int i = 1; i <= 1; i++) {
+        digitalWrite(hijau, HIGH);
+        delay(400);
+        digitalWrite(hijau, LOW);
+        delay(200);
+      }
+    }
+
+    else if (model == 2) {
+      digitalWrite(A, HIGH); digitalWrite(B, HIGH);
+      digitalWrite(C, LOW);  digitalWrite(D, HIGH);
+      digitalWrite(E, HIGH); digitalWrite(F, LOW);
+      digitalWrite(G, HIGH);
+
+      myServo.write(servo);
+
+      for (int i = 1; i <= 2; i++) {
+        if (i % 2 == 1) {
+          digitalWrite(hijau, HIGH);
+          delay(400);
+          digitalWrite(hijau, LOW);
+        } else {
+          digitalWrite(merah, HIGH);
+          delay(400);
+          digitalWrite(merah, LOW);
+        }
+        delay(200);
+      }
+    }
+
+    else if (model == 3) {
+      digitalWrite(A, HIGH); digitalWrite(B, HIGH);
+      digitalWrite(C, HIGH); digitalWrite(D, HIGH);
+      digitalWrite(E, LOW);  digitalWrite(F, LOW);
+      digitalWrite(G, HIGH);
+
+      myServo.write(servo);
+
+      for (int i = 1; i <= 3; i++) {
+        if (i % 2 == 1) {
+          digitalWrite(hijau, HIGH);
+          delay(400);
+          digitalWrite(hijau, LOW);
+        } else {
+          digitalWrite(merah, HIGH);
+          delay(400);
+          digitalWrite(merah, LOW);
+        }
+        delay(200);
+      }
+    }
+
+    else if (model == 4) {
+      digitalWrite(A, LOW);  digitalWrite(B, HIGH);
+      digitalWrite(C, HIGH); digitalWrite(D, LOW);
+      digitalWrite(E, LOW);  digitalWrite(F, HIGH);
+      digitalWrite(G, HIGH);
+
+      myServo.write(servo);
+
+      for (int i = 1; i <= 4; i++) {
+        if (i % 2 == 1) {
+          digitalWrite(hijau, HIGH);
+          delay(400);
+          digitalWrite(hijau, LOW);
+        } else {
+          digitalWrite(merah, HIGH);
+          delay(400);
+          digitalWrite(merah, LOW);
+        }
+        delay(200);
+      }
+    }
+
+    else if (model == 5) {
+      digitalWrite(A, HIGH); digitalWrite(B, LOW);
+      digitalWrite(C, HIGH); digitalWrite(D, HIGH);
+      digitalWrite(E, LOW);  digitalWrite(F, HIGH);
+      digitalWrite(G, HIGH);
+
+      myServo.write(servo);
+
+      for (int i = 1; i <= 5; i++) {
+        if (i % 2 == 1) {
+          digitalWrite(hijau, HIGH);
+          delay(400);
+          digitalWrite(hijau, LOW);
+        } else {
+          digitalWrite(merah, HIGH);
+          delay(400);
+          digitalWrite(merah, LOW);
+        }
+        delay(200);
+      }
+    }
+
+    else if (model == 6) {
+      digitalWrite(A, HIGH); digitalWrite(B, LOW);
+      digitalWrite(C, HIGH); digitalWrite(D, HIGH);
+      digitalWrite(E, HIGH); digitalWrite(F, HIGH);
+      digitalWrite(G, HIGH);
+
+      myServo.write(servo);
+
+      for (int i = 1; i <= 6; i++) {
+        if (i % 2 == 1) {
+          digitalWrite(hijau, HIGH);
+          delay(400);
+          digitalWrite(hijau, LOW);
+        } else {
+          digitalWrite(merah, HIGH);
+          delay(400);
+          digitalWrite(merah, LOW);
+        }
+        delay(200);
+      }
+    }
+
+    else if (model == 7) {
+      digitalWrite(A, HIGH); digitalWrite(B, HIGH);
+      digitalWrite(C, HIGH); digitalWrite(D, LOW);
+      digitalWrite(E, LOW);  digitalWrite(F, LOW);
+      digitalWrite(G, LOW);
+
+      myServo.write(servo);
+
+      for (int i = 1; i <= 7; i++) {
+        if (i % 2 == 1) {
+          digitalWrite(hijau, HIGH);
+          delay(400);
+          digitalWrite(hijau, LOW);
+        } else {
+          digitalWrite(merah, HIGH);
+          delay(400);
+          digitalWrite(merah, LOW);
+        }
+        delay(200);
+      }
+    }
+
+    else if (model == 8) {
+      digitalWrite(A, HIGH); digitalWrite(B, HIGH);
+      digitalWrite(C, HIGH); digitalWrite(D, HIGH);
+      digitalWrite(E, HIGH); digitalWrite(F, HIGH);
+      digitalWrite(G, HIGH);
+
+      myServo.write(servo);
+
+      for (int i = 1; i <= 8; i++) {
+        if (i % 2 == 1) {
+          digitalWrite(hijau, HIGH);
+          delay(400);
+          digitalWrite(hijau, LOW);
+        } else {
+          digitalWrite(merah, HIGH);
+          delay(400);
+          digitalWrite(merah, LOW);
+        }
+        delay(200);
+      }
+    }
+
+    else if (model == 9) {
+      digitalWrite(A, HIGH); digitalWrite(B, HIGH);
+      digitalWrite(C, HIGH); digitalWrite(D, HIGH);
+      digitalWrite(E, LOW);  digitalWrite(F, HIGH);
+      digitalWrite(G, HIGH);
+
+      myServo.write(servo);
+
+      for (int i = 1; i <= 9; i++) {
+        if (i % 2 == 1) {
+          digitalWrite(hijau, HIGH);
+          delay(400);
+          digitalWrite(hijau, LOW);
+        } else {
+          digitalWrite(merah, HIGH);
+          delay(400);
+          digitalWrite(merah, LOW);
+        }
+        delay(200);
+      }
+    }
+  }
+
+  tekananTerakhir = model;
+}
+

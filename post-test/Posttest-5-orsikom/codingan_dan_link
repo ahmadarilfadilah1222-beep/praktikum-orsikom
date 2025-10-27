@@ -1,0 +1,186 @@
+Link = https://wokwi.com/projects/445613153852984321
+#include <Servo.h>
+
+Servo servo1;
+Servo servo2;
+
+int tombol = 2;
+int A = 4; int B = 5; int C = 6; int D = 7;
+int E = 8;int F = 9;int G = 10;
+int MERAH = 12;
+int HIJAU = 13;
+
+int mentPins[7] = {A, B, C, D, E, F, G};
+
+bool programStarted = false;
+
+void tampilAngka(int digit) {
+  int pola[10][7] = {
+    {1, 1, 1, 1, 1, 1, 0},
+    {0, 1, 1, 0, 0, 0, 0},
+    {1, 1, 0, 1, 1, 0, 1},
+    {1, 1, 1, 1, 0, 0, 1},
+    {0, 1, 1, 0, 0, 1, 1},
+    {1, 0, 1, 1, 0, 1, 1},
+    {1, 0, 1, 1, 1, 1, 1},
+    {1, 1, 1, 0, 0, 0, 0},
+    {1, 1, 1, 1, 1, 1, 1},
+    {1, 1, 1, 1, 0, 1, 1}
+  };
+  for (int i = 0; i < 7; i++) {
+    digitalWrite(mentPins[i], pola[digit][i]);
+  }
+}
+
+void setup() {
+  pinMode(tombol, INPUT);
+  for (int i = 0; i < 7; i++) pinMode(mentPins[i], OUTPUT);
+  pinMode(MERAH, OUTPUT);
+  pinMode(HIJAU, OUTPUT);
+  Serial.begin(9600);
+
+  for (int i = 0; i < 7; i++) digitalWrite(mentPins[i], LOW);
+  digitalWrite(MERAH, HIGH);
+  digitalWrite(HIJAU, LOW);
+  servo1.attach(3);
+  servo2.attach(11);
+  servo1.write(90);
+  servo2.write(90);
+}
+
+void loop() {
+
+  if (!programStarted) {
+    Serial.println("Smart Lock Siap. Tekan tombol untuk memulai!");
+    while (digitalRead(tombol) == LOW) {}
+    delay(50);
+    while (digitalRead(tombol) == HIGH) {}
+    delay(200);
+    programStarted = true;
+  }
+
+  String input = "";
+  bool adaInput = false;
+
+  while (true) {
+    while (Serial.available() > 0) Serial.read();
+    delay(100);
+    Serial.println("Masukkan Passwordnya!:");
+
+    bool kembaliKeInput = false;
+    for (int detik = 5; detik >= 1; detik--) {
+      tampilAngka(detik);
+      delay(1000);
+
+      if (Serial.available() > 0) {
+        input = Serial.readStringUntil('\n');
+        input.trim();
+
+        if (input.length() == 0) continue;
+
+        adaInput = true;
+        break;
+      }
+
+      if (detik == 1 && !adaInput) {
+        Serial.println("Waktunya habis!");
+        for (int j = 0; j < 7; j++) digitalWrite(mentPins[j], LOW);
+        digitalWrite(MERAH, HIGH);  digitalWrite(HIJAU, LOW);
+
+        Serial.println("");
+        Serial.println("Smart Lock Siap. Tekan tombol untuk memulai!");
+
+        while (digitalRead(tombol) == LOW) {}
+        delay(50);
+        while (digitalRead(tombol) == HIGH) {}
+        delay(300);
+
+        input = "";
+        adaInput = false;
+        delay(500);
+
+        kembaliKeInput = true;
+        break;
+      }
+    }
+
+    if (kembaliKeInput) continue;
+
+    if (adaInput && input.length() > 0) {
+      bool isNumber = true;
+      for (int i = 0; i < input.length(); i++) {
+        if (!isDigit(input[i])) {
+          isNumber = false;
+          break;
+        }
+      }
+
+      if (isNumber) {
+        int angka = input.toInt();
+        if (angka == 119) {
+          Serial.println("Passwordnya benar! Pintu akan terkunci dalam 9 detik");
+          digitalWrite(HIJAU, HIGH);  digitalWrite(MERAH, LOW);
+          servo1.write(180);
+          servo2.write(0);
+
+          for (int detik = 9; detik >= 1; detik--) {
+            tampilAngka(detik);
+            delay(1000);
+            if (detik == 1) {
+              servo1.write(90);
+              servo2.write(90);
+            }
+          }
+
+          for (int i = 0; i < 7; i++) digitalWrite(mentPins[i], LOW);
+          digitalWrite(MERAH, HIGH);  digitalWrite(HIJAU, LOW);
+          adaInput = false;
+
+          Serial.println("");
+          Serial.println("Smart Lock Siap. Tekan tombol untuk memulai!");
+
+          while (digitalRead(tombol) == LOW) {}
+          delay(50);
+          while (digitalRead(tombol) == HIGH) {}
+          delay(300);
+          programStarted = true;
+          continue;
+        }
+        
+        else {
+          Serial.println("Passwordnya salah!");
+          for (int i = 0; i < 7; i++) digitalWrite(mentPins[i], LOW);
+          digitalWrite(MERAH, HIGH);  digitalWrite(HIJAU, LOW);
+          adaInput = false;
+
+          Serial.println("");
+          Serial.println("Smart Lock Siap. Tekan tombol untuk memulai!");
+
+          while (digitalRead(tombol) == LOW) {}
+          delay(50);
+          while (digitalRead(tombol) == HIGH) {}
+          delay(300);
+          continue;
+        }
+      }
+      
+      else {
+        Serial.println("Input hanya angka!");
+        for (int i = 0; i < 7; i++) digitalWrite(mentPins[i], LOW);
+        digitalWrite(MERAH, HIGH);  digitalWrite(HIJAU, LOW);
+
+        Serial.println("");
+        Serial.println("Smart Lock Siap. Tekan tombol untuk memulai!");
+
+        while (digitalRead(tombol) == LOW) {}
+        delay(50);
+        while (digitalRead(tombol) == HIGH) {}
+        delay(300);
+        continue;
+      }
+    }
+
+    while (digitalRead(tombol) == HIGH) {}
+    delay(200);
+  }
+}
