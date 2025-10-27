@@ -7,7 +7,7 @@ Servo servo2;
 
 int tombol = 2;
 int A = 4; int B = 5; int C = 6; int D = 7;
-int E = 8;int F = 9;int G = 10;
+int E = 8; int F = 9; int G = 10;
 int MERAH = 12;
 int HIJAU = 13;
 
